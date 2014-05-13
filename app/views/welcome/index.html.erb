@@ -1,20 +1,20 @@
 
+<div class="wrapper">
+  <div class="to_from"
+    <%= form_for :welcome do |f| %>
+      <p>
+        <%= f.text_field :from, :placeholder => 'From' %>
+        <%= f.text_field :from, :placeholder => 'From' %><br>
+        <br><%= f.text_field :from, :placeholder => 'To' %><br>
+      </p>
 
-<%= form_for :welcome do |f| %>
-  <p>
-    <%= f.text_field :from, :placeholder => 'From' %>
-    <%= f.text_field :from, :placeholder => 'From' %><br>
-    <br><%= f.text_field :from, :placeholder => 'To' %><br>
+      <p>
+        <%= f.submit "Find Flights" %>
+      </p>
+    <% end %>
+  </div><!-- to_from -->
+</div><!-- wrapper -->
 
-
-
-
-  </p>
-
-  <p>
-    <%= f.submit "Find Flights" %>
-  </p>
-<% end %>
 
 
 
