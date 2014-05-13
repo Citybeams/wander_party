@@ -6,6 +6,8 @@
         <%= f.text_field :from, :placeholder => 'From' %>
         <%= f.text_field :from, :placeholder => 'From' %><br>
         <br><%= f.text_field :from, :placeholder => 'To' %><br>
+        <%=f.label :date, "Date" %>
+         <%=f.date_select :date, id: "dateField" %>
       </p>
 
       <p>
