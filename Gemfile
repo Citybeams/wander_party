@@ -40,3 +40,16 @@ gem 'spring',        group: :development
 
 gem 'httparty'
 
+
+group :development, :test do
+
+gem 'rspec'
+gem 'rspec-rails'
+gem 'guard'
+gem 'terminal-notifier-guard'
+gem 'pry-rails'
+gem 'shoulda-matchers'
+gem 'guard-rspec'
+gem 'guard-bundler', require: false
+end
+
