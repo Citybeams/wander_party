@@ -2,7 +2,9 @@ require 'spec_helper'
 
 describe WelcomeController do
 
-it { should pass }
+it 'should pass' do
+  1 + 1 == 2
+end
 
 
 it' should return a list of flights' do

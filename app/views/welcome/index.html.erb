@@ -10,10 +10,28 @@
          <%=f.date_select :date, id: "dateField" %>
       </p>
 
-      <p>
+      <p id="find-flights">
         <%= f.submit "Find Flights" %>
       </p>
     <% end %>
+
+  <ul>
+    <%= @response["PricedItineraries"].each do |data| %>
+    <li>
+      $<%= data["AirItineraryPricingInfo"]["ItinTotalFare"]["TotalFare"]["Amount"] %>
+    </li>
+    <li>
+      Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
+    </li>
+    <li>
+      Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
+    </li>
+
+    <% end %>
+
+  </ul>
+
+
   </div><!-- to_from -->
 </div><!-- wrapper -->
 
