@@ -1,42 +1,24 @@
 
 <div class="wrapper">
-  <div class="to_from"
-    <%= form_for :welcome do |f| %>
+  <div class="to_from">
+    <%= form_tag "/flights" do %>
       <p>
-        <%= f.text_field :origin_input, :placeholder => 'From' %>
-        <%= f.text_field :origin_input, :placeholder => 'From' %><br>
-        <br><%= f.text_field :destination_input, :placeholder => 'To' %><br>
-        <%=f.label :departure_date, "Departure Date" %>
-         <%=f.date_select :departure_date, id: "dateField" %>
-         <%=f.label :return_date, "Return Date" %>
-         <%=f.date_select :return_date, id: "dateField" %>
+        <%= text_field_tag :origin_input  %>
+        <%= text_field_tag :origin_input %><br>
+        <br><%= text_field_tag :destination_input  %><br>
+        <%= label_tag :depart_date  %>
+         <%= date_select :depart_date, id: "dateField" %>
+         <br>
+         <%= label_tag :return_date, "Return Date" %>
+         <%= date_select :return_date, id: "dateField" %>
       </p>
 
       <p id="find-flights">
-        <%= f.submit "Find Flights" %>
+        <%= submit_tag "Find Flights" %>
       </p>
     <% end %>
 
-  <ul>
-    <!-- .each loop for the array after PricedItineraries -->
-      <%= @response["PricedItineraries"].each do |data| %>
-    <li>
-      $<%= data["AirItineraryPricingInfo"]["ItinTotalFare"]["TotalFare"]["Amount"] %>
-    </li>
-    <li>
-      <!-- parsing for departure times hashed and arrays here -->
-        Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
-    </li>
-    <li>
-        <!-- parsing for arrival times  -->
-        Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
-    </li>
-    <li>
-      <!-- parsing for operating airline -->
-    <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["MarketingAirline"]["Code"] %>
-    </li>
-  </ul>
-  <% end %>
+
 
   </div><!-- to_from -->
 </div><!-- wrapper -->
