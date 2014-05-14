@@ -16,14 +16,17 @@
     <% end %>
 
   <ul>
+    <!-- .each loop for the array after PricedItineraries -->
     <%= @response["PricedItineraries"].each do |data| %>
     <li>
       $<%= data["AirItineraryPricingInfo"]["ItinTotalFare"]["TotalFare"]["Amount"] %>
     </li>
     <li>
+      <!-- parsing for departure times hashed and arrays here -->
       Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
     </li>
     <li>
+      <!-- parsing for arrival times  -->
       Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
     </li>
 
