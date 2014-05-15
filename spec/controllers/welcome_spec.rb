@@ -2,13 +2,11 @@ require 'spec_helper'
 
 describe WelcomeController do
 
-it 'should pass' do
-  1 + 1 == 2
-end
-
 
 it' should return a list of flights' do
-    get 'https://api.test.sabre.com/v1/shop/flights?origin=BOS&destination=LAX&departuredate=2014-08-01&returndate=2014-08-14&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc'
+   HTTParty.get("https://api.test.sabre.com/v1/shop/flights?origin=JFK&destination=LAX&departuredate=2014-07-01&returndate=2014-07-14&outboundflightstops=0&inboundflightstops=0&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTC!ICESMSLB\/CRT.LB!-3663573353839303422!35306!0!!E2E-1
+"})
     assert_equal 200, response.body
   end
 end
+

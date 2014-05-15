@@ -1,36 +1,40 @@
-<h1>Your list of Two Flights Landing Together</h1>
+<h1>Your List of Two Flights Landing Together</h1>
 
 <div class="flight_one_wrapper">
   <div class="flight_one"
     <ul>
         <!-- .each loop for the array after PricedItineraries -->
-      <% @response["PricedItineraries"].each do |data| %>
-        <li>
-          $<%= data["AirItineraryPricingInfo"]["ItinTotalFare"]["TotalFare"]["Amount"] %>
-        </li>
-        <!-- parsing for departing airport -->
-        <li>
-        From: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureAirport"]["LocationCode"] %>
-        </li>
-        <li>
-          <!-- parsing for departure times hashed and arrays here -->
-            Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
-        </li>
+      <% if @response["PricedItineraries"].present? %>
+        <% @response["PricedItineraries"].each do |data| %>
+          <div class="flight_result">
+          <li>
+            $<%= data["AirItineraryPricingInfo"]["ItinTotalFare"]["TotalFare"]["Amount"] %>
+          </li>
+          <!-- parsing for departing airport -->
+          <li>
+          From: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureAirport"]["LocationCode"] %>
+          </li>
+          <li>
+            <!-- parsing for departure times hashed and arrays here -->
+              Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
+          </li>
 
-        <!-- parsing for arriving airport -->
-        <li>
-        To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
-        </li>
+          <li>
+          <!-- parsing for arriving airport -->
+          To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
+          </li>
 
-        <li>
-            <!-- parsing for arrival times  -->
-            Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
-        </li>
-        <li>
-          <!-- parsing for operating airline -->
-        Airline is <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["MarketingAirline"]["Code"] %>
-        </li>
-      <% end %>
+          <li>
+              <!-- parsing for arrival times  -->
+              Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
+          </li>
+          <li>
+            <!-- parsing for operating airline -->
+          Airline is <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["MarketingAirline"]["Code"] %>
+          </li>
+          </div>
+        <% end %>
+       <% end %>
     </ul>
   </div><!-- flight one -->
 </div><!-- flight one wrapper -->
@@ -40,33 +44,37 @@
   <div class="flight_two"
     <ul>
         <!-- .each loop for the array after PricedItineraries -->
-      <% @response2["PricedItineraries"].each do |data| %>
-        <li>
-          $<%= data["AirItineraryPricingInfo"]["ItinTotalFare"]["TotalFare"]["Amount"] %>
-        </li>
-        <!-- parsing for departing airport -->
-        <li>
-        From: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureAirport"]["LocationCode"] %>
-        </li>
-        <li>
-          <!-- parsing for departure times hashed and arrays here -->
-            Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
-        </li>
+      <% if @response["PricedItineraries"].present? %>
+        <% @response2["PricedItineraries"].each do |data| %>
+        <div class="flight_result">
+          <li>
+            $<%= data["AirItineraryPricingInfo"]["ItinTotalFare"]["TotalFare"]["Amount"] %>
+          </li>
+          <!-- parsing for departing airport -->
+          <li>
+          From: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureAirport"]["LocationCode"] %>
+          </li>
+          <li>
+            <!-- parsing for departure times hashed and arrays here -->
+              Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
+          </li>
 
-        <!-- parsing for arriving airport -->
-        <li>
-        To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
-        </li>
+          <!-- parsing for arriving airport -->
+          <li>
+          To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
+          </li>
 
-        <li>
-            <!-- parsing for arrival times  -->
-            Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
-        </li>
-        <li>
-          <!-- parsing for operating airline -->
-        Airline is <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["MarketingAirline"]["Code"] %>
-        </li>
-      <% end %>
+          <li>
+              <!-- parsing for arrival times  -->
+              Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
+          </li>
+          <li>
+            <!-- parsing for operating airline -->
+          Airline is <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["MarketingAirline"]["Code"] %>
+          </li>
+        </div>
+        <% end %>
+       <% end %>
     </ul>
   </div><!-- flight two -->
 </div><!-- flight two wrapper -->
