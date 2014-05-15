@@ -1,11 +1,13 @@
-
+<h1>Search Two Flights for You and a Friend at the Same Time!</h1>
 <div class="wrapper">
   <div class="to_from">
     <%= form_tag "/flights" do %>
       <p>
-        <%= text_field_tag :origin_input  %>
-        <%= text_field_tag :origin_input2 %><br>
-        <br><%= text_field_tag :destination_input  %><br>
+        <%= text_field_tag :origin_input, nil, :placeholder =>"Departing from..." %>
+        <%= text_field_tag :origin_input2, nil, :placeholder =>"Departing from..." %><br>
+        <div class="destination_input">
+          <br><%= text_field_tag :destination_input, nil, :placeholder =>"Flying to..."  %><br>
+        </div><!-- destination input -->
         <%= label_tag :depart_date  %>
          <%= date_field_tag :depart_date, id: "dateField" %>
          <br>
@@ -17,11 +19,10 @@
         <%= submit_tag "Find Flights" %>
       </p>
     <% end %>
-
-
-
   </div><!-- to_from -->
 </div><!-- wrapper -->
+
+
 
 
 

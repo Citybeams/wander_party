@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+body{
+  overflow: hidden;
+}
 
 
 .flight_one_wrapper{
@@ -11,8 +13,8 @@
 
 .flight_one{
   position: relative;
-  left: 300px;
-  top: 300px;
+  left: 350px;
+  top: 100px;
 }
 
 
@@ -22,12 +24,15 @@
 
 .flight_two{
   position: relative;
-  left: 600px;
-  bottom: 900px;
+  left: 680px;
+  top: 100px;
 }
 
 h1{
   text-align: center;
 }
+
+
+
 
 

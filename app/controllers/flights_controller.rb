@@ -4,8 +4,7 @@ class FlightsController < ApplicationController
   end
 
   def show
-    # flight = Flight.new
-    # flight.origin = params[]
+
   end
 
   def create
@@ -19,10 +18,7 @@ class FlightsController < ApplicationController
     @response = HTTParty.get("https://api.test.sabre.com/v1/shop/flights?origin=#{origin_input}&destination=#{destination_input}&departuredate=#{depart_date}&returndate=#{return_date}&outboundflightstops=0&inboundflightstops=0&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTC!ICESMSLB\/CRT.LB!-3663573353839303422!35306!0!!E2E-1"})
 
 
-# https://api.test.sabre.com/v1/shop/flights?origin=JFK&destination=LAX&departuredate=2014-10-12&returndate=2014-10-14
-
-
-   # capture the values from params
+    # capture the values from params
       origin_input2 = params[:origin_input2]
     # assign values to variables
     # put variables in a string to make an httparty request
@@ -30,6 +26,8 @@ class FlightsController < ApplicationController
       depart_date = params[:depart_date]
       return_date = params[:return_date]
     @response2 = HTTParty.get("https://api.test.sabre.com/v1/shop/flights?origin=#{origin_input2}&destination=#{destination_input}&departuredate=#{depart_date}&returndate=#{return_date}&outboundflightstops=0&inboundflightstops=0&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTC!ICESMSLB\/CRT.LB!-3663573353839303422!35306!0!!E2E-1"})
+
+    @response3 = HTTParty.get("https://api.test.sabre.com/v1/shop/themes", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTC!ICESMSLB\/CRT.LB!-3663573353839303422!35306!0!!E2E-1"})
   end
 end
 
