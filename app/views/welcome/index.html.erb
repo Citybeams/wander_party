@@ -7,10 +7,10 @@
         <%= text_field_tag :origin_input %><br>
         <br><%= text_field_tag :destination_input  %><br>
         <%= label_tag :depart_date  %>
-         <%= date_select :depart_date, id: "dateField" %>
+         <%= date_field_tag :depart_date, id: "dateField" %>
          <br>
          <%= label_tag :return_date, "Return Date" %>
-         <%= date_select :return_date, id: "dateField" %>
+         <%= date_field_tag :return_date, id: "dateField" %>
       </p>
 
       <p id="find-flights">
