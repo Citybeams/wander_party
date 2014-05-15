@@ -22,10 +22,7 @@ class FlightsController < ApplicationController
 # https://api.test.sabre.com/v1/shop/flights?origin=JFK&destination=LAX&departuredate=2014-10-12&returndate=2014-10-14
 
 
-
-
-
-     # capture the values from params
+   # capture the values from params
       origin_input2 = params[:origin_input2]
     # assign values to variables
     # put variables in a string to make an httparty request

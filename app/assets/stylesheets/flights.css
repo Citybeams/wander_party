@@ -1,0 +1,33 @@
+// Place all the styles related to the flights controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.flight_one_wrapper{
+  position: absolute
+}
+
+.flight_one{
+  position: relative;
+  left: 300px;
+  top: 300px;
+}
+
+
+.flight_two_wrapper{
+  position: absolute
+}
+
+.flight_two{
+  position: relative;
+  left: 600px;
+  bottom: 900px;
+}
+
+h1{
+  text-align: center;
+}
+
+
