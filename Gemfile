@@ -53,3 +53,6 @@ gem 'guard-rspec'
 gem 'guard-bundler', require: false
 end
 
+gem 'rails_12factor', group: :production
+ruby "2.1.0"
+

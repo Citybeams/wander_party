@@ -1,0 +1,81 @@
+// Place all the styles related to the flights controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  overflow: hidden;
+}
+
+
+.flight_one_wrapper{
+  position: absolute
+}
+
+.flight_one{
+  position: relative;
+  left: 350px;
+  top: 100px;
+}
+
+
+.flight_two_wrapper{
+  position: absolute
+}
+
+.flight_two{
+  position: relative;
+  left: 680px;
+  top: 100px;
+}
+
+h1{
+  text-align: center;
+}
+
+.flight_result{
+  margin-bottom: 20px;
+}
+
+
+
+
+
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.wrapper{
+  position: absolute;
+}
+
+.to_from{
+  position: relative;
+  left: 400px;
+  top: 250px;
+}
+
+.destination_input{
+  margin-left: 86px;
+  margin-bottom: 20px;
+}
+
+#find-flights{
+    margin-left: 115px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
