@@ -33,7 +33,6 @@ class FlightsController < ApplicationController
 end
 
 
-Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTD!ICESMSLB\/CRT.LB!-3656171979547479421!373451!0!!E2E-1
 
 
 
