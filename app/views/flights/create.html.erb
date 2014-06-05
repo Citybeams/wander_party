@@ -16,17 +16,32 @@
           </li>
           <li>
             <!-- parsing for departure times hashed and arrays here -->
-              Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
+              Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"].gsub(/[T]/," ") %>
           </li>
 
           <li>
           <!-- parsing for arriving airport -->
           To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
           </li>
-
           <li>
               <!-- parsing for arrival times  -->
-              Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
+              Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"].gsub(/[T]/," ")%>
+          </li>
+          <br>
+          <li>
+          <!-- parsing for return departure airport -->
+          Returns From: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
+          </li>
+          <li>
+            <!-- parsing for return departure -->
+            Returns: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][1]["FlightSegment"][0]["DepartureDateTime"].gsub(/[T]/," ")%>
+          </li>
+           <li>
+          Returns To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureAirport"]["LocationCode"] %>
+          </li>
+          <li>
+            <!-- parsing for return arrival -->
+            Return Arrival: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][1]["FlightSegment"][0]["ArrivalDateTime"].gsub(/[T]/," ")%>
           </li>
           <li>
             <!-- parsing for operating airline -->
@@ -56,23 +71,39 @@
           </li>
           <li>
             <!-- parsing for departure times hashed and arrays here -->
-              Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"] %>
+              Departs: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureDateTime"].gsub(/[T]/," ") %>
           </li>
 
-          <!-- parsing for arriving airport -->
           <li>
+          <!-- parsing for arriving airport -->
           To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
           </li>
 
           <li>
               <!-- parsing for arrival times  -->
-              Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"]%>
+              Arrives: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalDateTime"].gsub(/[T]/," ")%>
+          </li>
+          <br>
+          <li>
+          <!-- parsing for return departure airport -->
+          Returns From: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["ArrivalAirport"]["LocationCode"] %>
+          </li>
+          <li>
+            <!-- parsing for return departure -->
+            Returns: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][1]["FlightSegment"][0]["DepartureDateTime"].gsub(/[T]/," ")%>
+          </li>
+           <li>
+          Returns To: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["DepartureAirport"]["LocationCode"] %>
+          </li>
+          <li>
+            <!-- parsing for return arrival -->
+            Return Arrival: <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][1]["FlightSegment"][0]["ArrivalDateTime"].gsub(/[T]/," ")%>
           </li>
           <li>
             <!-- parsing for operating airline -->
           Airline is <%= data["AirItinerary"]["OriginDestinationOptions"]["OriginDestinationOption"][0]["FlightSegment"][0]["MarketingAirline"]["Code"] %>
           </li>
-        </div>
+          </div>
         <% end %>
        <% end %>
     </ul>
