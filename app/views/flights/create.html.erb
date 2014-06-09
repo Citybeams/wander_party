@@ -1,8 +1,8 @@
 <h1>Your List of Two Flights Landing Together</h1>
 
 <div class="flight_one_wrapper">
-  <div class="flight_one"
-  <h2>Flight 1</h2>
+  <div class="flight_one">
+    <h2>Flight One</h2>
     <ul>
         <!-- .each loop for the array after PricedItineraries -->
       <% if @response["PricedItineraries"].present? %>
@@ -57,7 +57,8 @@
 
 
 <div class="flight_two_wrapper">
-  <div class="flight_two"
+  <div class="flight_two">
+    <h2>Flight Two</h2>
     <ul>
         <!-- .each loop for the array after PricedItineraries -->
       <% if @response["PricedItineraries"].present? %>

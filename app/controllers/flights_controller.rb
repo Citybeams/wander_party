@@ -15,7 +15,7 @@ class FlightsController < ApplicationController
       destination_input = params[:destination_input]
       depart_date = params[:depart_date]
       return_date = params[:return_date]
-    @response = HTTParty.get("https://api.test.sabre.com/v1/shop/flights?origin=#{origin_input}&destination=#{destination_input}&departuredate=#{depart_date}&returndate=#{return_date}&outboundflightstops=0&inboundflightstops=0&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/CERTG!ICESMSLB\/CRT.LB!-3654762960776936795!312542!0!!E2E-1"})
+    @response = HTTParty.get("https://api.test.sabre.com/v1/shop/flights?origin=#{origin_input}&destination=#{destination_input}&departuredate=#{depart_date}&returndate=#{return_date}&outboundflightstops=0&inboundflightstops=0&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/CERTG!ICESMSLB\/CRT.LB!-3654721852254822877!310374!0!!E2E-1"})
 
 
 
@@ -26,7 +26,7 @@ class FlightsController < ApplicationController
       destination_input = params[:destination_input]
       depart_date = params[:depart_date]
       return_date = params[:return_date]
-    @response2 = HTTParty.get("https://api.test.sabre.com/v1/shop/flights?origin=#{origin_input2}&destination=#{destination_input}&departuredate=#{depart_date}&returndate=#{return_date}&outboundflightstops=0&inboundflightstops=0&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/CERTG!ICESMSLB\/CRT.LB!-3654762960776936795!312542!0!!E2E-1"})
+    @response2 = HTTParty.get("https://api.test.sabre.com/v1/shop/flights?origin=#{origin_input2}&destination=#{destination_input}&departuredate=#{depart_date}&returndate=#{return_date}&outboundflightstops=0&inboundflightstops=0&onlineitinerariesonly=N&limit=10&offset=1&eticketsonly=N&sortby=totalfare&order=asc&sortby2=departuretime&order2=asc", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/CERTG!ICESMSLB\/CRT.LB!-3654721852254822877!310374!0!!E2E-1"})
 
     @response3 = HTTParty.get("https://api.test.sabre.com/v1/shop/themes", :headers => { "Authorization" => "Bearer Shared/IDL:IceSess\/SessMgr:1\.0.IDL/Common/!ICESMS\/ACPCRTC!ICESMSLB\/CRT.LB!-3663573353839303422!35306!0!!E2E-1"})
   end
