@@ -1,0 +1,113 @@
+// Place all the styles related to the flights controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  overflow: scroll;
+}
+
+
+.flight_one_wrapper{
+  position: absolute
+}
+
+.flight_one{
+  position: relative;
+  left: 360px;
+  top: -5px;
+}
+
+
+.flight_two_wrapper{
+  position: absolute
+}
+
+.flight_two{
+  position: relative;
+  left: 670px;
+  top: -5px;
+}
+
+h1{
+  text-align: center;
+  font-size: 40px;
+  color: black;
+}
+
+.flight_result{
+  margin-bottom: 20px;
+  border: 1px solid grey;
+  list-style: none;
+  padding: 20px;
+  background-color: white;
+}
+
+h2{
+  margin-left: 40px;
+}
+
+
+
+
+
+
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.wrapper{
+  position: absolute;
+}
+
+.to_from{
+  position: relative;
+  left: 500px;
+  top: 300px;
+}
+
+.destination_input{
+  margin-left: 86px;
+  margin-bottom: 20px;
+}
+
+#find-flights{
+    margin-left: 115px;
+}
+
+.logo_wrapper{
+  position: absolute;
+}
+
+.logo{
+  position: relative;
+  left: 400px;
+  border: 1px solid black;
+}
+
+.date_input{
+  margin-top: 25px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+
+body{
+  background-image: url(/assets/wander_party_beach.jpg);
+  background-size: cover;
+}
